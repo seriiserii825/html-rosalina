@@ -1,0 +1,27 @@
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 910px;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__content {
+    position: relative;
+    top: -80px;
+  }
+  img {
+    margin-bottom: 50px;
+  }
+  &__title {
+    margin-bottom: 50px;
+    font-size: 96px;
+    letter-spacing: -0.02em;
+    color: white;
+  }
+  &__text {
+    @include spacegrotesksemibold;
+    font-size: 36px;
+    color: white;
+  }
+}

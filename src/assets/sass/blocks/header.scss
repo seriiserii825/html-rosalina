@@ -32,13 +32,20 @@
   justify-content: flex-end;
   list-style: none;
   margin-right: 60px;
+  @media screen and (max-width: 1400px) {
+    margin-right: 120px;
+  }
+  @media screen and (max-width: 850px) {
+    display: none;
+  }
+
 
   &__item
   {
     &:hover
     {
       .sub-menu {
-        opacity: 1;
+        display: flex;
       }
       .main-menu__link
       {
@@ -48,6 +55,23 @@
       .menu-icon
       {
         transform: translateX(-50%) scale(1);
+      }
+    }
+    &:last-child {
+      @media screen and (max-width: 1390px) {
+        display: none;
+      }
+    }
+    &:nth-child(4)
+    {
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
+    }
+    &:nth-child(3)
+    {
+      @media screen and (max-width: 1040px) {
+        display: none;
       }
     }
   }
@@ -81,13 +105,13 @@
   position: absolute;
   bottom: -264px;
   left: 0;
-  display: flex;
+  display: none;
   justify-content: space-between;
   padding: 20px 80px;
   width: 1920px;
   background: $madison;
   transition: all .2s ease-in;
-  opacity: 0;
+  z-index: 1000;
   &::before {
     content: '';
     position: absolute;
@@ -164,5 +188,57 @@
   {
     max-width: 740px;
     font-size: 24px;
+  }
+}
+.main-menu-mobile {
+  position: absolute;
+  top: 90px;
+  right: 40px;
+  display: none;
+  width: 288px;
+  color: white;
+  background: $madison;
+  z-index: 1000;
+  @media screen and (max-width: 768px) {
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__item {
+    position: relative;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    &:hover .main-menu-mobile-submenu {
+      display: block;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 25px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+  }
+  &-submenu {
+    display: none;
+    border-top: 1px solid rgba(128, 128, 128, 0.2);
+    &__link {
+      display: block;
+      padding: 15px 20px;
+      font-size: 12px;
+      text-decoration: none;
+      color: white;
+    }
   }
 }
