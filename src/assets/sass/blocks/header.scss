@@ -1,0 +1,168 @@
+.main-header
+{
+  position: relative;
+  color: white;
+  height: 90px;
+  background: $madison;
+
+  &::after
+  {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 100%;
+    background: url("../i/menu_last.png") no-repeat center;
+  }
+
+  .logo
+  {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+  }
+}
+
+.main-menu
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  margin-right: 60px;
+
+  &__item
+  {
+    &:hover
+    {
+      .sub-menu {
+        opacity: 1;
+      }
+      .main-menu__link
+      {
+        color: $buttercup;
+      }
+
+      .menu-icon
+      {
+        transform: translateX(-50%) scale(1);
+      }
+    }
+  }
+
+  &__link
+  {
+    position: relative;
+    display: block;
+    padding: 0 25px;
+    line-height: 90px;
+    font-size: 14px;
+    letter-spacing: 1.45px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    transition: all .3s;
+  }
+
+  .menu-icon
+  {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: all .3s;
+  }
+}
+
+.sub-menu
+{
+  position: absolute;
+  bottom: -264px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  width: 1920px;
+  background: $madison;
+  transition: all .2s ease-in;
+  opacity: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  &__item
+  {
+    a
+    {
+      display: block;
+      text-decoration: none;
+    }
+
+    &-title
+    {
+      position: relative;
+      padding-bottom: 10px;
+      @include spacegrotesksemibold;
+      font-size: 20px;
+      color: #f7f7f726;
+      text-decoration: none;
+      transition: all .4s;
+      border: none;
+
+      &::after
+      {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #f7f7f726;
+        transition: all .4s;
+      }
+    }
+
+    &:hover
+    {
+      .sub-menu__item-title
+      {
+        color: white;
+
+        &::after
+        {
+          background: white;
+        }
+      }
+    }
+  }
+
+  &__list
+  {
+    display: flex;
+
+    li
+    {
+      margin-left: 60px;
+    }
+  }
+
+  &__title
+  {
+    margin-bottom: 10px;
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  &__text
+  {
+    max-width: 740px;
+    font-size: 24px;
+  }
+}
