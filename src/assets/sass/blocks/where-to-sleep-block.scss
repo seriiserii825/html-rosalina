@@ -5,6 +5,14 @@
   @media screen and (max-width: 992px) {
     display: block;
   }
+  &.dove-dormire {
+    .where-to-sleep-block__wrap {
+      height: 435px;
+    }
+    .where-to-sleep-block__content {
+      top: 33%;
+    }
+  }
   &__item
   {
     position: relative;

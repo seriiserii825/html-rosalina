@@ -258,8 +258,13 @@ p {
 }
 
 .section .section__title {
+  margin-bottom: 24px;
   font-size: 28px;
   letter-spacing: -0.01em;
+}
+
+.section .section__text {
+  color: white;
 }
 
 .main-header {
@@ -519,18 +524,46 @@ p {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .intro.dove-dormire .intro__content {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .intro.dove-dormire .intro__title {
+    font-size: 56px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .intro.dove-dormire .intro__title {
+    font-size: 40px;
+  }
+}
+
+.intro.dove-dormire .intro__text {
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: justify;
+  max-width: 1015px;
+}
+
+@media screen and (max-width: 576px) {
+  .intro.dove-dormire .intro__text {
+    font-size: 26px;
+  }
+}
+
 .intro__content {
   position: relative;
   top: -80px;
 }
 
-.intro img {
-  margin-bottom: 50px;
-}
-
 .intro__title {
   margin-bottom: 50px;
   font-size: 96px;
+  line-height: 1.15;
   letter-spacing: -0.02em;
   color: white;
 }
@@ -711,6 +744,14 @@ p {
   .where-to-sleep-block {
     display: block;
   }
+}
+
+.where-to-sleep-block.dove-dormire .where-to-sleep-block__wrap {
+  height: 435px;
+}
+
+.where-to-sleep-block.dove-dormire .where-to-sleep-block__content {
+  top: 33%;
 }
 
 .where-to-sleep-block__item {
@@ -956,6 +997,7 @@ p {
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
+  font-family: 'Space Grotesk Regular', sans-serif;
   font-size: 18px;
   color: white;
   text-indent: 15px;
@@ -1209,6 +1251,140 @@ input.valid {
     margin-top: 20px;
     margin-left: 0;
   }
+}
+
+.block-about-dove {
+  padding: 56px 0 140px;
+  background: #1D4082;
+}
+
+.block-dove-dormire {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+@media screen and (max-width: 1100px) {
+  .block-dove-dormire {
+    display: block;
+    padding-top: 30px;
+    max-width: 800px;
+  }
+}
+
+.block-dove-dormire__item {
+  position: relative;
+  height: 832px;
+}
+
+@media screen and (max-width: 1100px) {
+  .block-dove-dormire__item {
+    margin-bottom: 40px;
+  }
+}
+
+.block-dove-dormire__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 0 50px 20px;
+  display: block;
+  width: 485px;
+  height: 435px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background: #103272;
+  transition: all .3s;
+}
+
+@media screen and (max-width: 1430px) {
+  .block-dove-dormire__wrap {
+    width: 420px;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .block-dove-dormire__wrap {
+    padding: 0 15px 15px;
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .block-dove-dormire__wrap {
+    padding: 0 50px 20px;
+    width: 485px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .block-dove-dormire__wrap {
+    padding: 0 15px 15px;
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .block-dove-dormire__wrap {
+    width: 300px;
+    height: 500px;
+  }
+}
+
+.block-dove-dormire__wrap:hover {
+  top: 49%;
+  box-shadow: 0 8px 18px -8px #EFBB10;
+}
+
+.block-dove-dormire__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  z-index: -1;
+}
+
+.block-dove-dormire__subtitle {
+  margin-top: 32px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.block-dove-dormire__title {
+  margin-bottom: 72px;
+  font-size: 36px;
+  line-height: 43px;
+}
+
+.block-dove-dormire__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.block-dove-dormire__content p {
+  line-height: 1.5;
+}
+
+.block-dove-dormire__link {
+  margin-top: auto;
+  width: 200px;
+  text-align: center;
+  height: 58px;
+  line-height: 58px;
+  text-decoration: none;
+  color: #fff;
+  background: #EFBB10;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=my.css.map */

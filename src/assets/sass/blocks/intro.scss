@@ -10,17 +10,43 @@
     height: 610px;
     line-height: 1.1;
   }
+  &.dove-dormire {
+    .intro__content {
+      @media screen and (max-width: 992px) {
+      	top: 0;
+      }
+
+    }
+    .intro__title {
+      @media screen and (max-width: 992px) {
+        font-size: 56px;
+      }
+      @media screen and (max-width: 576px) {
+        font-size: 40px;
+      }
+
+
+    }
+    .intro__text {
+      margin: 0 auto;
+      padding: 0 15px;
+      text-align: justify;
+      max-width: 1015px;
+      @media screen and (max-width: 576px) {
+        font-size: 26px;
+      }
+
+    }
+  }
 
   &__content {
     position: relative;
     top: -80px;
   }
-  img {
-    margin-bottom: 50px;
-  }
   &__title {
     margin-bottom: 50px;
     font-size: 96px;
+    line-height: 1.15;
     letter-spacing: -0.02em;
     color: white;
     @media screen and (max-width: 620px) {
