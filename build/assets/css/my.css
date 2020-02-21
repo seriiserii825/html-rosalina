@@ -1423,4 +1423,65 @@ input.valid {
   font-weight: normal;
 }
 
+.page-header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+  background: #1D4082;
+}
+
+.breadcrumbs {
+  margin-bottom: 40px;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs__list a {
+  position: relative;
+  padding-right: 24px;
+  margin-right: 14px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.breadcrumbs__list a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs__list a::after {
+  content: '>';
+  position: absolute;
+  top: -2px;
+  right: 0;
+  font-size: 20px;
+  color: #EFBB10;
+}
+
+.meta-list {
+  display: flex;
+  align-items: center;
+  margin-left: 35px;
+}
+
+.meta-list a {
+  margin-right: 24px;
+  display: inline-block;
+  padding: 15px 20px;
+  font-family: 'Space Grotesk SemiBold', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: #1D4082;
+  background: #EFBB10;
+  transition: all .4s;
+}
+
+.meta-list a:hover {
+  background: #103272;
+  color: #EFBB10;
+}
+
 /*# sourceMappingURL=my.css.map */
