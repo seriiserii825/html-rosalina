@@ -1,0 +1,102 @@
+.where-to-sleep-block
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media screen and (max-width: 992px) {
+    display: block;
+  }
+  &__item
+  {
+    position: relative;
+    height: 553px;
+    background: $fern-frond;
+    @media screen and (max-width: 576px) {
+      height: 400px;
+    }
+
+
+    &:nth-child(2)
+    {
+      background: $buttercup;
+
+      .where-to-sleep-block__wrap
+      {
+        &:hover
+        {
+          box-shadow: 0 6px 10px $madison;
+        }
+      }
+    }
+
+    &:nth-child(3)
+    {
+      background: $chathams-blue;
+    }
+  }
+
+  &__wrap
+  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 458px;
+    height: 158px;
+    transition: all .3s;
+    @media screen and (max-width: 1420px) {
+      width: 300px;
+      height: 100px;
+    }
+    @media screen and (max-width: 992px) {
+      width: 458px;
+      height: 158px;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 300px;
+      height: 100px;
+    }
+
+    &:hover
+    {
+      top: 48%;
+      box-shadow: 0 8px 15px $buttercup;
+    }
+  }
+
+  &__content
+  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    color: white;
+  }
+
+  &__subtitle
+  {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  &__title
+  {
+    font-size: 36px;
+    line-height: 43px;
+    @media screen and (max-width: 1420px) {
+      font-size: 26px;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 36px;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 26px;
+    }
+
+  }
+}
