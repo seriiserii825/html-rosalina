@@ -37,6 +37,11 @@ let gulp = require('gulp'),
 	gulpif = require("gulp-if"),
 	replace = require('gulp-replace');
 
+gulp.task('mail', function(){
+	return	gulp.src(['src/mail.php'])
+		.pipe(gulp.dest('build/'));
+});
+
 gulp.task('ttf2woff', function(){
 return	gulp.src(['src/assets/fonts/*.ttf'])
 		.pipe(debug({title: "woff"}))
@@ -247,7 +252,8 @@ gulp.task('default', gulp.series(
 		'audio',
 		'image',
 		'libs',
-		'favicon'
+		'favicon',
+		'mail'
 	),
 	gulp.parallel('pug', 'watch', 'browser-sync')
 ));

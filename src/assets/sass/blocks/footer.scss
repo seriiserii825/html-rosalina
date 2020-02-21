@@ -1,0 +1,267 @@
+.main-footer
+{
+  background: $fern-frond;
+
+  .section__title
+  {
+    margin-bottom: 26px;
+    color: white;
+  }
+
+  &__wrap
+  {
+    display: grid;
+    grid-template-columns: 1fr 606px;
+    margin: 0 auto;
+    max-width: 1920px;
+    @media screen and (max-width: 1430px)
+    {
+      display: block;
+    }
+
+  }
+
+  &__contacts
+  {
+    margin-left: 80px;
+    padding: 60px 0;
+    @media screen and (max-width: 992px) {
+      margin-left: 0;
+      padding: 60px 15px;
+    }
+
+  }
+
+  &__form-wrap
+  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 130px;
+    @media screen and (max-width: 1820px)
+    {
+      grid-gap: 40px;
+    }
+    @media screen and (max-width: 992px)
+    {
+      display: block;
+    }
+
+
+  }
+
+  &__text
+  {
+    color: white;
+
+    p
+    {
+      &:first-child
+      {
+        margin-bottom: 30px;
+      }
+    }
+
+    a
+    {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.form-group
+{
+  display: flex;
+  margin-bottom: -1px;
+  border: 1px solid white;
+  @media screen and (max-width: 576px)
+  {
+    display: block;
+  }
+
+  &:last-child
+  {
+    margin-bottom: 26px;
+  }
+
+  input
+  {
+    flex: 1;
+    @include placeholder-input(white, center);
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea
+  {
+    font-size: 18px;
+    color: white;
+    text-indent: 15px;
+    border: none;
+    background: transparent;
+
+    &:focus
+    {
+      border-color: white;
+      outline: 1px solid white;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"]
+  {
+    height: 76px;
+    @media screen and (max-width: 576px)
+    {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &--flex
+  {
+    input[type="text"]
+    {
+      border-right: 1px solid white;
+      @media screen and (max-width: 576px)
+      {
+        border: none;
+        border-bottom: 1px solid white;
+        width: 100%;
+      }
+    }
+  }
+
+  textarea
+  {
+    padding-top: 30px;
+    width: 100%;
+    height: 170px;
+    @include placeholder-textarea(white, center);
+  }
+}
+
+.form-footer
+{
+  display: flex;
+  align-items: center;
+  margin-top: 26px;
+  @media screen and (max-width: 992px)
+  {
+    margin-bottom: 80px;
+  }
+  @media screen and (max-width: 576px)
+  {
+    display: block;
+  }
+
+
+}
+
+input[type="submit"]
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  width: 140px;
+  height: 76px;
+  font-size: 24px;
+  color: white;
+  background: $buttercup;
+  border: none;
+  transition: all .3s;
+  @media screen and (max-width: 576px)
+  {
+    margin-bottom: 10px;
+  }
+
+
+  &:hover
+  {
+    background: darken($buttercup, 10%);
+    cursor: pointer;
+  }
+}
+
+.checkbox
+{
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px;
+}
+
+.checkbox + label
+{
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0;
+  padding-left: 30px;
+  vertical-align: middle;
+  text-transform: none;
+}
+
+.checkbox + label:before
+{
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  margin-right: 16px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: $buttercup;
+  transition: .2s;
+  @media screen and (max-width: 830px)
+  {
+    top: 7px;
+  }
+
+}
+
+.checkbox + label:after
+{
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 4px;
+  display: block;
+  width: 13px;
+  height: 13px;
+  transition: .2s;
+  background: url("../i/check.svg") no-repeat center;
+  background-size: cover;
+  opacity: 0;
+  @media screen and (max-width: 830px)
+  {
+    top: 7px;
+  }
+}
+
+.checkbox:checked + label:after
+{
+  opacity: 1;
+}
+
+.privacy
+{
+  color: white;
+
+  a
+  {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.main-footer__map
+{
+  @media screen and (max-width: 1430px)
+  {
+    height: 600px;
+  }
+
+}
