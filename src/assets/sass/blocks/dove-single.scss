@@ -1,0 +1,33 @@
+.dove-single {
+  &__intro {
+    position: relative;
+    height: 436px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.4);
+      z-index: 1;
+    }
+    &-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 72px;
+      text-align: center;
+      color: white;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+  }
+  &__title {
+    position: relative;
+    top: -110px;
+    font-weight: normal;
+  }
+}
