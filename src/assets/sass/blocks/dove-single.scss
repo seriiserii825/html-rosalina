@@ -94,12 +94,82 @@
 .info {
   display: flex;
   align-items: center;
+  margin-bottom: 80px;
   li {
     margin-right: 22px;
     .value {
+      margin-left: 8px;
       font-weight: bold;
       color: black;
     }
 
   }
+}
+.dove-single__item-text p {
+  line-height: 1.6;
+}
+.dove-single__item-title {
+  margin-bottom: 14px;
+  font-size: 30px;
+  color: black;
+}
+.dove-single-servicers__title {
+  position: relative;
+  padding-left: 30px;
+  margin: 20px 0 20px;
+  font-size: 20px;
+  color: $chathams-blue;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: url('../i/discover-icon.svg') no-repeat center;
+    background-size: cover;
+  }
+}
+.dove-single-services__list {
+  column-count: 2;
+  column-gap: 50px;
+  li {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 16px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #666;
+    }
+  }
+}
+.dove-single__item-contacts {
+  display: flex;
+  justify-content: flex-end;
+  a {
+    text-decoration: none;
+    color: #666;
+    svg {
+      position: relative;
+      top: 2px;
+      fill: #666;
+      width: 18px;
+      height: 18px;
+    }
+  }
+  .icon-circle {
+    display: inline-block;
+    margin-left: 8px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: $madison;
+  }
+
 }
