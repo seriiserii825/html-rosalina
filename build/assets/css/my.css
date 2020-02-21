@@ -201,9 +201,9 @@ p {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 460px) {
   .sandwitch-wrap {
-    right: 30px;
+    right: 60px;
   }
 }
 
@@ -285,6 +285,12 @@ p {
   left: 30px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+@media screen and (max-width: 460px) {
+  .main-header .logo {
+    width: 160px;
+  }
 }
 
 .main-menu {
