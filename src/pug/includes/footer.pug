@@ -4,14 +4,18 @@ footer.main-footer
             h2.section__title Contattaci
             .main-footer__form-wrap
                 .form
-                    form
+                    form(action="mail.php" method="POST")#js-form
                         .form-group.form-group--flex
-                            input(type="text" name="name" placeholder="Nome")
-                            input(type="email" name="email" placeholder="Email")
+                            .form-elem
+                                input(type="text" id="js-text" name="name" placeholder="Nome")
+                            .form-elem
+                                input(type="email" id="js-email"  name="email" placeholder="Email")
                         .form-group
-                            input(type="text" name="oggetto" placeholder="Oggetto")
-                        .form-group
-                            textarea(name="messaggio" placeholder="Messaggio")
+                            .form-elem
+                                input(type="text" id="js-oggetto" name="oggetto" placeholder="Oggetto")
+                        .form-group.form-group--textarea
+                            .form-elem
+                                textarea(name="messaggio" id="js-messaggio" placeholder="Messaggio")
                         .form-footer
                             input(type="submit" value="Invia")
                             .privacy

@@ -18,12 +18,54 @@ $(function () {
 
 	$('#js-eventi-news-block__content').append('<iframe id="iframe" src="https://web4.deskline.net/rosolina/it/event/list" ;="" scrolling="no" width="100%" height="2140" style=" overflow-x:scroll;"></iframe>');
 
+
+	let mail = function () {
+
+		if ($('#js-form').length > 0) {
+
+			$('#js-form').validate({
+				rules: {
+					email: {
+						required: true,
+						email: true
+					},
+					name: {
+						required: true,
+					},
+					oggetto: {
+						required: true,
+					},
+					messaggio: {
+						required: true,
+					},
+					check: {
+						required: true
+					}
+				},
+				messages: {
+					email: {
+						required: "Il campo è obbligatorio",
+						email: "Inserisci il campo email"
+					},
+					name: {
+						required: "Il campo è obbligatorio",
+					},
+					oggetto: {
+						required: "Il campo è obbligatorio",
+					},
+					messaggio: {
+						required: "Il campo è obbligatorio",
+					},
+					check: {
+						required: "Il campo è obbligatorio"
+					}
+				},
+			});
+		}
+	};
+	mail();
+
 });
-
-// $(window).on('load', function () {
-// 	$('#js-eventi-news-block__content').appendChild('<iframe id="iframe" src="https://web4.deskline.net/rosolina/it/event/list" ;="" scrolling="no" width="100%" height="2140" style=" overflow-x:scroll;"></iframe>');
-// });
-
 
 
 
