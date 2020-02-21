@@ -30,4 +30,76 @@
     top: -110px;
     font-weight: normal;
   }
+  &__content {
+    background: $chathams-blue;
+  }
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 830px);
+    grid-gap: 70px;
+  }
+  &__item {
+    position: relative;
+  }
+  &__slider {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    overflow: hidden;
+  }
+  &__slider-item {
+    height: 456px;
+  }
+
+  .slider-btn-prev,
+  .slider-btn-next {
+    position: absolute;
+    top: 200px;
+    width: 60px;
+    height: 100px;
+    background: $chathams-blue;
+    z-index: 1000;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 18px;
+      height: 30px;
+      background-size: cover;
+      background-position: center;
+      z-index: 10001;
+    }
+  }
+  .slider-btn-prev {
+    left: 0;
+    &::before {
+      background-image: url('../i/left-chevron.svg');
+    }
+  }
+  .slider-btn-next {
+    right: 0;
+    &::before {
+      background-image: url('../i/right-chevron.svg');
+    }
+  }
+}
+
+.dove-single__item-content {
+  padding: 46px;
+  color: $boulder;
+  background: white;
+}
+.info {
+  display: flex;
+  align-items: center;
+  li {
+    margin-right: 22px;
+    .value {
+      font-weight: bold;
+      color: black;
+    }
+
+  }
 }

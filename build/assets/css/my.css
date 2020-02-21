@@ -1423,6 +1423,92 @@ input.valid {
   font-weight: normal;
 }
 
+.dove-single__content {
+  background: #1D4082;
+}
+
+.dove-single__wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 830px);
+  grid-gap: 70px;
+}
+
+.dove-single__item {
+  position: relative;
+}
+
+.dove-single__slider {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  overflow: hidden;
+}
+
+.dove-single__slider-item {
+  height: 456px;
+}
+
+.dove-single .slider-btn-prev,
+.dove-single .slider-btn-next {
+  position: absolute;
+  top: 200px;
+  width: 60px;
+  height: 100px;
+  background: #1D4082;
+  z-index: 1000;
+}
+
+.dove-single .slider-btn-prev:before,
+.dove-single .slider-btn-next:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 18px;
+  height: 30px;
+  background-size: cover;
+  background-position: center;
+  z-index: 10001;
+}
+
+.dove-single .slider-btn-prev {
+  left: 0;
+}
+
+.dove-single .slider-btn-prev::before {
+  background-image: url("../i/left-chevron.svg");
+}
+
+.dove-single .slider-btn-next {
+  right: 0;
+}
+
+.dove-single .slider-btn-next::before {
+  background-image: url("../i/right-chevron.svg");
+}
+
+.dove-single__item-content {
+  padding: 46px;
+  color: #777;
+  background: white;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info li {
+  margin-right: 22px;
+}
+
+.info li .value {
+  font-weight: bold;
+  color: black;
+}
+
 .page-header {
   padding-top: 30px;
   padding-bottom: 30px;
