@@ -1,0 +1,14 @@
+.eventi-news-block {
+  padding: 50px 0;
+  .section__title {
+    margin-bottom: 60px;
+  }
+  &__content {
+    margin: 0 auto;
+    max-width: 930px;
+    height: 2140px;
+  }
+  iframe {
+    border: none;
+  }
+}
