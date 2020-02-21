@@ -3,8 +3,18 @@ $(function () {
 		$(this).parent('.main-menu-mobile__item').find('.main-menu-mobile-submenu').slideToggle();
 	});
 
+	let flag = false;
+
 	$('.main-menu__item').hover(function () {
-		$(this).find('.sub-menu').fadeIn();
+		if(flag === false){
+			$(this).find('.sub-menu').fadeIn();
+			flag = true;
+
+			setTimeout(function () {
+				flag = false;
+			}, 400);
+		}
+
 	}, function () {
 		$(this).find('.sub-menu').fadeOut();
 	});
