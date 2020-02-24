@@ -1431,13 +1431,42 @@ input.valid {
   display: grid;
   grid-template-columns: repeat(2, 830px);
   grid-gap: 70px;
+  padding-bottom: 63px;
+}
+
+@media screen and (max-width: 1750px) {
+  .dove-single__wrap {
+    margin: 0 auto;
+    width: 1330px;
+    grid-template-columns: repeat(2, 630px);
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .dove-single__wrap {
+    display: block;
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .dove-single__wrap {
+    width: auto;
+  }
 }
 
 .dove-single__item {
   position: relative;
 }
 
+@media screen and (max-width: 1380px) {
+  .dove-single__item {
+    margin-bottom: 60px;
+  }
+}
+
 .dove-single__slider {
+  height: 456px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   overflow: hidden;
@@ -1493,12 +1522,20 @@ input.valid {
   padding: 46px;
   color: #777;
   background: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .info {
   display: flex;
-  align-items: center;
   margin-bottom: 80px;
+}
+
+@media screen and (max-width: 1750px) {
+  .info {
+    display: block;
+    margin-bottom: 40px;
+  }
 }
 
 .info li {
@@ -1512,6 +1549,7 @@ input.valid {
 }
 
 .dove-single__item-text p {
+  margin-bottom: 16px;
   line-height: 1.6;
 }
 
@@ -1540,11 +1578,18 @@ input.valid {
   background-size: cover;
 }
 
-.dove-single-services__list {
+.dove-single-services__list.column-2 {
   -webkit-column-count: 2;
   column-count: 2;
   -webkit-column-gap: 50px;
   column-gap: 50px;
+}
+
+@media screen and (max-width: 576px) {
+  .dove-single-services__list.column-2 {
+    -webkit-column-count: initial;
+    column-count: initial;
+  }
 }
 
 .dove-single-services__list li {
@@ -1583,12 +1628,18 @@ input.valid {
 }
 
 .dove-single__item-contacts .icon-circle {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 8px;
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: #103272;
+}
+
+.dove-single__item-contacts .icon-circle svg {
+  position: static;
 }
 
 .page-header {
@@ -1635,6 +1686,13 @@ input.valid {
   margin-left: 35px;
 }
 
+@media screen and (max-width: 940px) {
+  .meta-list {
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+}
+
 .meta-list a {
   margin-right: 24px;
   display: inline-block;
@@ -1645,6 +1703,12 @@ input.valid {
   color: #1D4082;
   background: #EFBB10;
   transition: all .4s;
+}
+
+@media screen and (max-width: 940px) {
+  .meta-list a {
+    margin-bottom: 30px;
+  }
 }
 
 .meta-list a:hover {
