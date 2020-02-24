@@ -84,7 +84,8 @@ $(function () {
 	let doveSlider = function () {
 		$('.dove-single__slider').each(function () {
 			$(this).slick({
-				arrows: false
+				arrows: false,
+				dots: true
 			});
 			let leftArrow = $(this).closest('.dove-single__item').find('.slider-btn-prev');
 			let rightArrow = $(this).closest('.dove-single__item').find('.slider-btn-next');

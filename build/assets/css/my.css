@@ -1545,6 +1545,36 @@ input.valid {
   background-image: url("../i/right-chevron.svg");
 }
 
+.dove-single .slick-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dove-single .slick-dots li {
+  width: 10px;
+  height: 10px;
+  margin: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid grey;
+  background-color: grey;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dove-single .slick-dots li.slick-active {
+  background: transparent;
+}
+
+.dove-single .slick-dots button {
+  display: none;
+}
+
 .dove-single__item-content {
   padding: 46px;
   color: #777;
