@@ -1448,6 +1448,7 @@ input.valid {
   position: relative;
   top: -110px;
   font-weight: normal;
+  word-break: break-all;
 }
 
 .dove-single__content {
