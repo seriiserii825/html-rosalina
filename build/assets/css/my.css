@@ -1205,6 +1205,33 @@ input.valid {
   outline: 1px solid darkgreen;
 }
 
+.to-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.to-up.show {
+  display: flex;
+}
+
+.to-up:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.to-up svg {
+  fill: white;
+}
+
 .copyright {
   padding: 30px 0;
   color: rgba(255, 255, 255, 0.47);
@@ -1617,6 +1644,15 @@ input.valid {
 .dove-single__item-contacts a {
   text-decoration: none;
   color: #666;
+  transition: all .3s;
+}
+
+.dove-single__item-contacts a:hover {
+  color: #EFBB10;
+}
+
+.dove-single__item-contacts a:hover svg {
+  fill: #EFBB10;
 }
 
 .dove-single__item-contacts a svg {
@@ -1625,6 +1661,7 @@ input.valid {
   fill: #666;
   width: 18px;
   height: 18px;
+  transition: all .3s;
 }
 
 .dove-single__item-contacts .icon-circle {
@@ -1640,6 +1677,33 @@ input.valid {
 
 .dove-single__item-contacts .icon-circle svg {
   position: static;
+}
+
+.dove-single__item-block-contacts {
+  margin-top: -40px;
+  margin-bottom: 50px;
+}
+
+.dove-single__item-block-contacts__title {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 1.3px;
+  color: #777;
+}
+
+.dove-single__item-block-contacts span {
+  display: block;
+}
+
+.dove-single__item-block-contacts span.value {
+  font-weight: bold;
+  color: black;
+}
+
+.dove-single__item-block-contacts span.value a {
+  text-decoration: none;
+  color: black;
 }
 
 .page-header {

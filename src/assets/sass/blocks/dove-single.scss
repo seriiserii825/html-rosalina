@@ -246,6 +246,13 @@
   {
     text-decoration: none;
     color: #666;
+    transition: all .3s;
+    &:hover {
+      color: $buttercup;
+      svg {
+        fill: $buttercup;
+      }
+    }
 
     svg
     {
@@ -254,6 +261,7 @@
       fill: #666;
       width: 18px;
       height: 18px;
+      transition: all .3s;
     }
   }
 
@@ -274,4 +282,26 @@
     }
   }
 
+}
+.dove-single__item-block-contacts {
+  margin-top: -40px;
+  margin-bottom: 50px;
+  &__title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 1.3px;
+    color: $boulder;
+  }
+  span {
+    display: block;
+    &.value {
+      font-weight: bold;
+      color: black;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
 }

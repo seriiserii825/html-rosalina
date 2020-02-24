@@ -1,5 +1,5 @@
 $(function () {
-	let mainMenu = function(){
+	let mainMenu = function () {
 		$('.main-menu-mobile__img').on('click', function () {
 			$(this).parent('.main-menu-mobile__item').find('.main-menu-mobile-submenu').slideToggle();
 		});
@@ -7,7 +7,7 @@ $(function () {
 		let flag = false;
 
 		$('.main-menu__item').hover(function () {
-			if(flag === false){
+			if (flag === false) {
 				$(this).find('.sub-menu').fadeIn();
 				flag = true;
 
@@ -29,7 +29,7 @@ $(function () {
 	};
 	mainMenu();
 
-	let eventiIframe = function(){
+	let eventiIframe = function () {
 		$('#js-eventi-news-block__content').append('<iframe id="iframe" src="https://web4.deskline.net/rosolina/it/event/list" ;="" scrolling="no" width="100%" height="2140" style=" overflow-x:scroll;"></iframe>');
 	};
 	eventiIframe();
@@ -81,7 +81,7 @@ $(function () {
 	};
 	mail();
 
-	let doveSlider = function(){
+	let doveSlider = function () {
 		$('.dove-single__slider').each(function () {
 			$(this).slick({
 				arrows: false
@@ -105,7 +105,7 @@ $(function () {
 	};
 	doveSlider();
 
-	let scrollToMetaBlocks = function(){
+	let scrollToMetaBlocks = function () {
 		$('.meta-list a').on('click', function (e) {
 			e.preventDefault();
 
@@ -119,7 +119,24 @@ $(function () {
 	};
 	scrollToMetaBlocks();
 
+	let scrollToTop = function () {
+		$('#js-to-up').on('click', function () {
+			$('html, body').animate({
+				scrollTop: 0
+			}, 1000);
+		});
+
+
+		let documentHeight = $(document).height();
+		let pointHeight = documentHeight * 0.25;
+		let arrowUp = $('#js-to-up');
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > pointHeight) {
+				arrowUp.addClass('show');
+			} else {
+				arrowUp.removeClass('show');
+			}
+		});
+	};
+	scrollToTop();
 });
-
-
-
