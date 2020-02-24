@@ -1502,6 +1502,7 @@ input.valid {
 
 .dove-single__slider-item {
   height: 456px;
+  background-size: cover;
 }
 
 .dove-single .slider-btn-prev,
