@@ -6,6 +6,7 @@
 *.pdf
 *.sublime
 node_modules/
+build/
 npm-debug.*
 bower_components/
 Thumbs.db
